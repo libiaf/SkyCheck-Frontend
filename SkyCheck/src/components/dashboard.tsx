@@ -18,4 +18,3 @@ const Dashboard = ({ ciudad, children }: Props) => {
 };
 
 export default Dashboard;
-

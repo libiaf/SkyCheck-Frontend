@@ -1,0 +1,85 @@
+.glass {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Contenedor del header */
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 10px;
+  border-radius: 18px;
+}
+
+/* Marca “SkyCheck” */
+.app-header .brand {
+  font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+  font-size: 22px;
+  color: #15324b;
+  white-space: nowrap;
+}
+
+/* Form de búsqueda */
+.app-header .search {
+  position: relative;
+  flex: 1 1 auto;
+  display: flex;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #3b556b;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.search-input {
+  width: 43%;
+  padding: 10px 10px 10px 34px; /* espacio para la lupa */
+  border-radius: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  outline: none;
+  font-size: 14px;
+  background: #DFEAFA;
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.212);
+}
+
+.search-input::placeholder { color: #6b7f90; }
+
+.search-input:focus {
+  border-color: #cddef9;
+  box-shadow: 0 0 0 3px rgba(90,160,255,0.25), inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Botón info tipo píldora */
+.info-btn {
+  flex: 0 0 auto;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 14px;
+  background: #ffffffcc;
+  padding: 8px 10px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  color: #102a3b;
+  transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+}
+
+.info-btn:hover {
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  transform: translateY(-1px);
+}
+
+.info-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
