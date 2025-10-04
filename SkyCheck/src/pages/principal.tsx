@@ -10,7 +10,6 @@ const Principal = () => {
             <div> {/* content */} 
                 <div> {/* left content, wet+date+hours */}
                     <div> {/* wet */}
-                    
                     </div>
                     <div> {/* date + hours */}
                         <div> {/* date */}
