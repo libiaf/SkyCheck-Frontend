@@ -1,5 +1,8 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #f5eacc;
+.principal-container {
+  display: flex;  
+  justify-items: flex-end;
+  align-items: right;        /* centra verticalmente */
+  height: 100vh;              /* ocupa toda la altura */
+  padding: 2rem;
+  width: 100vw;
 }
