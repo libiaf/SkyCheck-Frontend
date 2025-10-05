@@ -3,7 +3,7 @@
 .widgets-container {
     display: flex;
     gap: 20px;
-    width: 100%;
+    width: 98%;
     padding: 10px;
 }
 
@@ -13,7 +13,7 @@
     border-radius: 21px;
     padding: 15px;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
     min-width: 10%;
     text-align: center;
     /* transition: transform 0.2s ease, box-shadow 0.2s ease; */
@@ -35,7 +35,7 @@
     border-radius: 21px;
     padding: 21px 17px 17px 17px;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
     min-width: 10%;
     text-align: center;
     
@@ -94,7 +94,7 @@
     padding: 25px 33px 25px;
     margin-bottom: 10px;
     background: rgba(255, 255, 255, 0.8);
-    border-radius: 30px;
+    border-radius: 21px;
     text-align: center;
     border-radius: 21px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
@@ -113,7 +113,6 @@
     font-family: 'Source Serif 4', serif;
     color: #222;
     margin-bottom: 0; 
-    padding-pottom: 10px;
     line-height: 1;
 }
 
@@ -136,11 +135,11 @@
 
 .badge {
     display: inline-block;
-    border-radius: 30px;
+    border-radius: 21px;
     font-weight: 500;
     font-family: 'Source Serif 4', serif;
     font-size: 1rem;
-    padding: 6px 20px !important; 
+    padding: 6px 15px !important; 
 }
 
 .badge-purple {

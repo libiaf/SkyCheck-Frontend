@@ -20,7 +20,7 @@ const Principal = () => {
                     </div>
                     <div> {/* date + hours */}
                         <div> {/* date */}
-                            
+                            <ReactDatePicker></ReactDatePicker>
                         </div>
                         <div> {/* hours */}
 
