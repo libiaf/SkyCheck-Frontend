@@ -21,7 +21,7 @@ const Principal = () => {
                     </div>
                 </div>
                 <div className="principal-container d-flex justify-content-end align-items-end">
-                <Dashboard ciudad="Hermosillo" >
+                <Dashboard ciudad="Hermosillo">
                 </Dashboard>
                 </div>
             </div>
