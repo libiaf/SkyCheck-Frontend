@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
+:root { --pill-bg: #c2ebf5; --pill-text: #000; }
+
+.date-wrapper {
+  display: inline-block;
+  position: relative;
+  background: var(--pill-bg);
+  border-radius: 9999px;
+  padding: 10px 45px; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  font-family: "Source Serif 4", serif;
+  color: var(--pill-text);
+  inline-size: clamp(260px, 32ch, 380px);
+  box-sizing: border-box;
+}
+
+.date-input {
+  background: transparent;
+  color: var(--pill-text);
+  border: none;
+  outline: none;
+
+  inline-size: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 22px;                
+  line-height: 1.25;
+  padding: 6px 34px 6px 20px;
+}
+.date-input::placeholder { color: rgba(0,0,0,0.55); }
+
+.date-chevron {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  width: 18px; height: 18px;
+  pointer-events: none;
+  transition: transform 160ms ease;
+}
+.date-wrapper.is-open .date-chevron {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.dp-calendar.react-datepicker {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+  font-family: "Source Serif 4", serif;
+  color: #111;
+}
+.dp-header {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 8px;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.react-datepicker__day--outside-month {
+  visibility: hidden;
+  pointer-events: none;
+}
