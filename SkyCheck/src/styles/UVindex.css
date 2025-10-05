@@ -1,0 +1,84 @@
+.uvindice {
+  border-radius: 21px;
+  padding: 0.8rem 1rem;
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.25);
+  transition: 0.3s ease;
+  width: 93%; /* mismo ancho que el WindOverview */
+}
+
+.uvindice:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.uvindice-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: #DFEAFA;
+  border-radius: 21px;
+  padding: 0.2rem 0.7rem;
+}
+
+.uvindice-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.uvindice-title {
+  font-size: 1rem;
+  font-family: "Source Serif 4", serif;
+  color: #000;
+}
+
+.uvindice-content {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex: 1;
+  margin-left: 1rem;
+}
+
+.uvindice-value {
+  font-size: 1rem;
+  font-family: "Source Serif 4", serif;
+}
+
+.uvindice-level {
+  font-size: 1rem;
+  font-family: "Source Serif 4", serif;
+  color: #000;
+}
+
+.uvindice-bar {
+  flex: 1;
+  height: 10px;
+  background: linear-gradient(
+    to right, 
+    #97D700, /* verde */
+    #FCE300, /* amarillo */
+    #FF8200, /* naranja */
+    #EF3340, /* rojo */
+    #990066  /* morado */
+  );
+  border-radius: 10px;
+  position: relative;
+}
+
+.uvindice-marker {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid black;
+  background: white;
+  box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.25);
+  transition: left 0.4s ease;
+}
