@@ -12,7 +12,6 @@ const Alerts: React.FC<AlertsProps> = ({ title = "Alerts", items, className }) =
   return (
     <div className={`alerts-card ${className ?? ""}`}>
       <div className="alerts-card__header">
-        {/* usa SVG importado; si no lo tienes, reemplaza por <span className="alerts-card__icon">⚠️</span> */}
         <img src={AlertIcon} alt="" aria-hidden="true" className="alerts-card__icon-img" />
         <span className="alerts-card__title">{title}</span>
       </div>

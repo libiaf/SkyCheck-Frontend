@@ -5,6 +5,15 @@ import "../styles/datepicker.css";
 
 import chevron from "../assets/chevron.svg";
 
+type Props = {
+  value?: Date | null;                    
+  onChange?: (d: Date | null) => void;   
+  className?: string;
+  minDate?: Date;
+  maxDate?: Date;
+  openToDate?: Date;
+};
+
 const daysInMonth = (y: number, m: number) => new Date(y, m + 1, 0).getDate();
 const addMonths = (base: Date, m: number) => {
   const y = base.getFullYear();
@@ -21,7 +30,15 @@ const monthsNames = [
   "July","August","September","October","November","December"
 ];
 
-const ReactDatePicker: React.FC = () => {
+const ReactDatePicker: React.FC<Props> = ({
+  value,
+  onChange,
+  className,
+  minDate,
+  maxDate,
+  openToDate
+}) => {
+  // “hoy” a medianoche, auto-actualiza al cambiar de día
   const [today, setToday] = useState<Date>(() => {
     const d = new Date();
     d.setHours(0, 0, 0, 0);
@@ -38,13 +55,16 @@ const ReactDatePicker: React.FC = () => {
     return () => clearTimeout(id);
   }, [today]);
 
-  const [date, setDate] = useState<Date | null>(null);
+  // estado interno SOLO si no te pasan `value`
+  const [innerDate, setInnerDate] = useState<Date | null>(null);
+  const selected = (value !== undefined ? value : innerDate) ?? null;
+
   const [open, setOpen] = useState(false);
 
-  const minDate = useMemo(() => addMonths(today, -2), [today]);
-  const maxDate = useMemo(() => addMonths(today,  2), [today]);
-  const minYear = minDate.getFullYear();
-  const maxYear = maxDate.getFullYear();
+  const minD = useMemo(() => minDate ?? addMonths(today, -2), [minDate, today]);
+  const maxD = useMemo(() => maxDate ?? addMonths(today,  2), [maxDate, today]);
+  const minYear = minD.getFullYear();
+  const maxYear = maxD.getFullYear();
 
   const placeholder = useMemo(
     () =>
@@ -53,23 +73,30 @@ const ReactDatePicker: React.FC = () => {
     [today]
   );
 
+  const handleChange = (d: Date | null) => {
+    if (value === undefined) {
+      // modo no controlado: guardamos local
+      setInnerDate(d);
+    }
+    onChange?.(d); // SIEMPRE notificamos al padre si existe
+  };
+
   return (
     <div className={`date-wrapper ${open ? "is-open" : ""}`}>
       <DatePicker
-        className="date-input"
+        className={`date-input ${className ?? ""}`}
         calendarClassName="dp-calendar"
         popperClassName="dp-popper"
-          
 
-        selected={date}
-        onChange={(d: Date | null) => setDate(d)}
+        selected={selected}
+        onChange={handleChange}
         dateFormat="MMM d, yyyy"
         placeholderText={placeholder}
         onCalendarOpen={() => setOpen(true)}
         onCalendarClose={() => setOpen(false)}
-        minDate={minDate}
-        maxDate={maxDate}
-        openToDate={today}
+        minDate={minD}
+        maxDate={maxD}
+        openToDate={openToDate ?? today}
         renderCustomHeader={({
           date: viewDate,
           changeYear, changeMonth,
@@ -78,8 +105,8 @@ const ReactDatePicker: React.FC = () => {
         }) => {
           const viewYear = viewDate.getFullYear();
           const years = Array.from({ length: maxYear - minYear + 1 }, (_, i) => minYear + i);
-          const startMonth = viewYear === minYear ? minDate.getMonth() : 0;
-          const endMonth   = viewYear === maxYear ? maxDate.getMonth()  : 11;
+          const startMonth = viewYear === minYear ? minD.getMonth() : 0;
+          const endMonth   = viewYear === maxYear ? maxD.getMonth()  : 11;
           const months = monthsNames
             .map((name, idx) => ({ name, idx }))
             .filter(m => m.idx >= startMonth && m.idx <= endMonth);
