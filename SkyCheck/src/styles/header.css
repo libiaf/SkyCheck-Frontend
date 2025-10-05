@@ -29,6 +29,20 @@
   color: #15324b;
   margin-right: 6px;
   white-space: nowrap;
+  display: flex;
+    align-items: center;
+    gap: 0.5rem; /* espacio entre logo y título */
+}
+    
+
+.brand-logo {
+    height: 60px; /* ajusta según tu diseño */
+    width: auto;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 /* Form de búsqueda */

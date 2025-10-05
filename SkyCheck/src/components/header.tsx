@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { FormEvent } from "react";
+import logo from '../assets/logo.png'
 import "../styles/header.css";
 
 type HeaderProps = {
@@ -30,7 +31,8 @@ const Header = ({
     <header className="app-header glass">
         <div className="header-box glass">
             <div className="brand" aria-label="Aplicación">
-                {title}
+              <img src={logo} alt="Logo" className="brand-logo" />
+              <span className="brand-title">{title}</span>
             </div>
 
             <form className="search" role="search" onSubmit={handleSubmit}>
