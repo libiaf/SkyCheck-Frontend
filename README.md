@@ -66,4 +66,4 @@ El proyecto cuenta con los siguientes comandos:
 
 ## Licencia
 
-Este proyecto se distribuye bajo la licencia **MIT**.  
+SkyCheck © 2025 by Zuleyca Balles, Regina Orduño, Mariana Carrillo, Libia Flores, Diana Escalante, and Mariana Islas is licensed under CC BY-ND 4.0
