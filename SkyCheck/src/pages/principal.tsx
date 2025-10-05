@@ -1,4 +1,7 @@
 import Dashboard from '../components/dashboard';
+import WindOverview from '../components/WindOverview';
+import ReactDatePicker from '../components/datepicker';
+import Alerts from '../components/Alerts';
 import '../styles/principal.css';
 
 const Principal = () => {
@@ -9,6 +12,7 @@ const Principal = () => {
             </div>
             <div> {/* content */} 
                 <div> {/* left content, wet+date+hours */}
+                    {/*<ReactDatePicker></ReactDatePicker>*/}
                     <div> {/* wet */}
                     
                     </div>
