@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Header from "../components/header";
-import MapView from "../components/MapView";
+import Header from "../components/header.tsx";
+import MapView from "../components/mapView.tsx";
 import { geocodeMock } from "../lib/geocodeMock";
 
 type Viewport = { lat:number; lon:number; zoom:number; label?:string };

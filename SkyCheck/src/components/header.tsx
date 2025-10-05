@@ -28,46 +28,48 @@ const Header = ({
 
   return (
     <header className="app-header glass">
-      <div className="brand" aria-label="Aplicación">
-        {title}
-      </div>
+        <div className="header-box glass">
+            <div className="brand" aria-label="Aplicación">
+                {title}
+            </div>
 
-      <form className="search" role="search" onSubmit={handleSubmit}>
-        <span className="search-icon" aria-hidden="true">
-          {/* Lupa SVG */}
-          <svg viewBox="0 0 24 24" width="18" height="18">
-            <path d="M21 21l-4.2-4.2m1.2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  fill="none" stroke="currentColor" strokeWidth="2"
-                  strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </span>
+            <form className="search" role="search" onSubmit={handleSubmit}>
+                <span className="search-icon" aria-hidden="true">
+                {/* Lupa SVG */}
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                    <path
+                    d="M21 21l-4.2-4.2m1.2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    />
+                </svg>
+                </span>
 
-        <input
-          className="search-input"
-          type="search"
-          value={query}
-          onChange={(e) => {
-            setQuery(e.target.value);
-            onChangeQuery?.(e.target.value);
-          }}
-          placeholder={placeholder}
-          aria-label="Buscar ciudad o coordenadas"
-        />
-      </form>
+                <input
+                className="search-input"
+                type="search"
+                value={query}
+                onChange={(e) => {
+                    setQuery(e.target.value);
+                    onChangeQuery?.(e.target.value);
+                }}
+                placeholder={placeholder}
+                aria-label="Buscar ciudad o coordenadas"
+                />
+            </form>
+        </div>
 
-      <button
-        type="button"
-        className="info-btn"
-        aria-label="Información"
-        onClick={onInfoClick}
-      >
-        {/* Ícono “i” */}
-        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-          <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" strokeWidth="2"/>
-          <path d="M12 8h.01M11 11h2v6h-2z" fill="currentColor" />
-        </svg>
-      </button>
+        {/* Botón info ahora está separado */}
+        <div
+            className="info-btn"
+            aria-label="Información"
+        >i
+        </div>
     </header>
+
   );
 };
 
