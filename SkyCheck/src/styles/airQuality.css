@@ -8,11 +8,6 @@
   margin: 1.5rem auto 0; 
 }
 
-.air-quality-container:hover {
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-  transform: translateY(-2px);
-}
-
 .air-quality-header {
   display: flex;
   align-items: center;

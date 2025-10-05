@@ -6,6 +6,7 @@ import ReactDatePicker from '../components/datepicker';
 import Alerts from '../components/Alerts';
 import AirQuality from '../components/airQuality.tsx';
 import TemperatureChartCJ, { type TempPoint } from "../components/TemperatureChart";
+import Probability from '../components/probability.tsx';
 
 import '../styles/principal.css';
 
@@ -62,6 +63,7 @@ const Principal = () => {
                     <UVindice uvIndex={8} level="High" />
                     <AirQuality aqi={120} level="Moderate" />
                     <TemperatureChartCJ data={mockTemps} />
+                    <Probability hot={30} cold={40} wind={70} uv={20} rain={93} humidity={67} />
                     <div className= "espacio"></div>
                 </Dashboard>
                 </div>

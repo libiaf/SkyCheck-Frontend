@@ -12,11 +12,6 @@
   width: 93%;         
 }
 
-.tempCard:hover {
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-    transform: translateY(-2px);
-}
-
 .tempHeader {
   display: flex;
   align-items: center;
