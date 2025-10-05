@@ -1,69 +1,68 @@
 # SkyCheck-Frontend
 
-Interfaz de usuario del proyecto SkyCheck, una aplicación web enfocada en mostrar condiciones del clima y del cielo mediante componentes visuales interactivos.
+User interface of the **SkyCheck** project, a web application focused on displaying weather and sky conditions through interactive visual components.
 
-## Descripción
+## Description
 
-SkyCheck-Frontend es la parte visual del sistema SkyCheck.  
-Permite consultar y visualizar información como:
+**SkyCheck-Frontend** is the visual part of the SkyCheck system.  
+It allows users to consult and visualize information such as:
 
-- Temperatura, viento, humedad y probabilidad de lluvia.  
-- Estados del cielo (despejado, nublado, etc.).  
-- Datos meteorológicos obtenidos desde el backend.  
+- Temperature, wind, humidity, and probability of rain.  
+- Sky states (clear, cloudy, etc.).  
+- Meteorological data obtained from the backend.  
 
-Su objetivo es ofrecer una experiencia clara y atractiva para el usuario final.
+Its goal is to offer a clear and visually appealing experience for the end user.
 
-## Tecnologías
+## Technologies
 
-| Tipo | Herramienta |
-|------|--------------|
-| Lenguaje principal | TypeScript |
+| Type | Tool |
+|------|------|
+| Main language | TypeScript |
 | Framework | React + Vite |
-| Estilos | CSS / Tailwind / Custom styles |
-| Librerías | React Router, Axios (o fetch), Componentes personalizados |
-| Control de versiones | Git / GitHub |
+| Styles | CSS / Tailwind / Custom styles |
+| Libraries | React Router, Axios (or fetch), Custom components |
+| Version control | Git / GitHub |
 
-## Instalación y ejecución
+## Installation and Execution
 
-1. Clonar el repositorio
+1. Clone the repository  
    ```bash
    git clone https://github.com/libiaf/SkyCheck-Frontend.git
    cd SkyCheck-Frontend
 
-## Instalación y uso
+## Installation and Usage
 
-Para instalar las dependencias, ejecuta el comando `npm install` en la terminal dentro del directorio del proyecto.  
-Luego, configura el entorno creando un archivo `.env` en la raíz del repositorio con las variables necesarias, por ejemplo:  
+To install the dependencies, run the command `npm install` in the terminal of the root directory of this project.  
+Then, set up the environment by creating a `.env` file in the root of the repository with the required variables, for example:   
 `VITE_API_URL=https://api.skycheck.example.com`.
 
-Una vez configurado, inicia el servidor de desarrollo con `npm run dev`.  
-Si deseas generar la versión optimizada para producción, usa `npm run build`.
+Once configured, start the development server with `npm run dev`. 
+If you want to generate the optimized production version, use `npm run build`.
 
-## Estructura del proyecto
+## Project Structure
 
-El proyecto está organizado de la siguiente manera:
+The project is organized as follows:
 
-El directorio `SkyCheck-Frontend/` contiene las carpetas principales.  
-Dentro de `src/` se encuentran los recursos y componentes del frontend:
+The SkyCheck-Frontend/ directory contains the main folders.
 
-- `assets/`: iconos e imágenes utilizadas en la interfaz.  
-- `components/`: componentes reutilizables, como `Probability` o `WeatherCard`.  
-- `pages/`: vistas principales de la aplicación.  
-- `styles/`: archivos de estilos globales.  
-- `App.tsx`: punto de entrada principal.  
-- `main.tsx`: archivo donde se renderiza React.
+Inside src/ you’ll find the resources and components of the frontend:
+- assets/: icons and images used in the interface.
+- components/: reusable components, such as Probability or WeatherCard.
+- pages/: main views of the application.
+- styles/: global style files.
+- App.tsx: main entry point.
+- main.tsx: file where React is rendered.
 
-Además, incluye archivos de configuración como `package.json`, `tsconfig.json` y `README.md`.
+It also includes configuration files such as package.json, tsconfig.json, and README.md.
 
-## Scripts disponibles
+## Available Scripts
 
-El proyecto cuenta con los siguientes comandos:
+The project includes the following commands:
+- npm run dev: starts the local development server.
+- npm run build: generates the optimized production version.
+- npm run preview: allows you to preview the production build locally.
+- npm run lint: analyzes the code for errors or bad practices.
 
-- `npm run dev`: inicia el servidor local de desarrollo.  
-- `npm run build`: genera la versión optimizada para producción.  
-- `npm run preview`: permite visualizar la build de producción localmente.  
-- `npm run lint`: analiza el código en busca de errores o malas prácticas.
-
-## Licencia
+## Licence
 
 SkyCheck © 2025 by Zuleyca Balles, Regina Orduño, Mariana Carrillo, Libia Flores, Diana Escalante, and Mariana Islas is licensed under CC BY-ND 4.0
