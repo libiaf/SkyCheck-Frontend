@@ -63,14 +63,21 @@
   height: 8px;
   background: linear-gradient(
     to right, 
-    #8B0040,  /* morado oscuro */
-    #D5006D,  /* rosa */
-    #FF8200,  /* naranja */
-    #FCE300,  /* amarillo */
-    #97D700   /* verde */
+    #97D700, /* verde */
+    #FCE300, /* amarillo */
+    #FF8200, /* naranja */
+    #EF3340, /* rojo */
+    #990066  /* morado */
   );
   border-radius: 10px;
   position: relative;
+}
+
+.icon{
+    width: 1.5rem;
+    height: auto;
+    margin:0;
+    margin-right: 0.5rem;
 }
 
 .air-quality-marker {

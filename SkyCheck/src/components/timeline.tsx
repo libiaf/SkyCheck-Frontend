@@ -98,9 +98,9 @@ export default function Timeline({ hours, value, onChangeHour }: TimelineProps) 
 
   return (
     <div className="container">
-      <button className="arrow-btn arrow-left" onClick={handlePrev} aria-label="Previous hours">
-        <img src={arrowLeft} alt="" />
-      </button>
+      <div className="arrow-btn arrow-left" onClick={handlePrev} aria-label="Previous hours">
+        <img src={arrowLeft} alt="" className="arrow-icon"/>
+      </div>
 
       <div className="timeline-container">
         {visible.map((h, i) => {
@@ -121,17 +121,17 @@ export default function Timeline({ hours, value, onChangeHour }: TimelineProps) 
               <div className="time-label">
                 {display}:00 <span className="period">{ampm}</span>
               </div>
-              <div className="weather-icon">
-                <img src={iconFor(h)} alt="" />
+              <div className="weather">
+                <img src={iconFor(h)} alt="" className="weather-icon"/>
               </div>
             </div>
           );
         })}
       </div>
 
-      <button className="arrow-btn arrow-right" onClick={handleNext} aria-label="Next hours">
-        <img src={arrowRight} alt="" />
-      </button>
+      <div className="arrow-btn arrow-right" onClick={handleNext} aria-label="Next hours">
+        <img src={arrowRight} alt="" className="arrow-icon"/>
+      </div>
     </div>
   );
 }

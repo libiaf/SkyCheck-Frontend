@@ -41,14 +41,23 @@
 }
 
 .arrow-btn {
-    display: flex;
+    display:flex;
     align-items: center;
     justify-content: center;
     background-color: #ffffffd9;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
+   
+
 }
+
+.arrow-icon {
+  width: 2rem;
+  height: 2rem;
+  margin:0;
+}
+
 
 .arrow-btn:hover:not(:disabled) {
     background: rgba(255, 255, 255, 0.2);
@@ -140,9 +149,13 @@
 }
 
 .weather-icon {
-    font-size: 2rem;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08));
-    transition: transform 0.2s ease;
+    width: 2.5rem;
+    height: auto;
+    margin:0;
+}
+
+.weather{
+    justify-content: center;
 }
 
 .timeline-item:hover .weather-icon {

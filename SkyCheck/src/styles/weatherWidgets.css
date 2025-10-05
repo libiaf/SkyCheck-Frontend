@@ -124,13 +124,19 @@
     padding-bottom: 8%;
 }
 
+.icon{
+    width: 2rem;
+    height: auto;
+    margin:0;
+}
+
 .badge {
     display: inline-block;
     border-radius: 21px;
     font-weight: 500;
     font-family: 'Source Serif 4', serif;
     font-size: 1rem;
-    padding: 6px 15px !important; 
+    padding: 6px 8px !important; 
 }
 
 .badge-purple {

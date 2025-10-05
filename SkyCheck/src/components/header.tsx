@@ -2,6 +2,8 @@ import { useState } from "react";
 import type { FormEvent } from "react";
 import logo from '../assets/logo.png'
 import "../styles/header.css";
+import InfoButton from "./InfoButton";
+import infoImage from '../assets/near-surface.jpeg'
 
 type HeaderProps = {
   title?: string;
@@ -65,11 +67,12 @@ const Header = ({
         </div>
 
         {/* Botón info ahora está separado */}
-        <div
-            className="info-btn"
-            aria-label="Información"
-        >i
-        </div>
+        <InfoButton
+        title="Near surface air temperature"
+        imgSrc={infoImage}
+        imgAlt="Grafica"
+        />
+
     </header>
 
   );

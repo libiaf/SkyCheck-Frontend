@@ -23,6 +23,7 @@
 .uvindice-icon {
   width: 20px;
   height: 20px;
+  margin:0;
 }
 
 .uvindice-title {
@@ -63,6 +64,7 @@
   );
   border-radius: 10px;
   position: relative;
+ 
 }
 
 .uvindice-marker {

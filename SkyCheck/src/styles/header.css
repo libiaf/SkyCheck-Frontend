@@ -36,8 +36,9 @@
     
 
 .brand-logo {
-    height: 60px; /* ajusta según tu diseño */
+    height: 3rem; /* ajusta según tu diseño */
     width: auto;
+    margin:0;
 }
 
 .brand-title {

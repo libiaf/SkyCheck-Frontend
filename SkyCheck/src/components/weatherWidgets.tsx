@@ -42,7 +42,7 @@ const PrecipitationWidget = ({ data }: { data: WeatherData['precipitation'] }) =
     return (
         <div className="widget-card">
             <div className="widget-header">
-                <img src={wet} alt="Precipitation" />
+                <img src={wet} alt="Precipitation" className="icon" />
                 <h3 className='extra-margin2'>Precipitation</h3>
             </div>
 
@@ -71,7 +71,7 @@ const HumidityWidget = ({ data }: { data: WeatherData['humidity'] }) => {
     return (
         <div className="humidity-widget">
             <div className="widget-header extra-margin">
-                <img src={moisture} alt="Humidity" />
+                <img src={moisture} alt="Humidity" className="icon" />
                 <h3>Humidity</h3>
             </div>
 

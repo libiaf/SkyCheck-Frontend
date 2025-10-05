@@ -21,9 +21,10 @@
 }
 
 .tempIconImg {
-  width: 18px;
-  height: 18px;
+  width: 1.5rem;
+  height: auto;
   display: block;
+  margin:0;
 }
 
 .tempTitle {

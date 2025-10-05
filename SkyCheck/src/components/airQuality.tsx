@@ -43,7 +43,7 @@ const AirQuality: React.FC<AirQualityProps> = ({
       {/* Header */}
       <div className="air-quality-header">
         <div className="air-quality-title-wrapper">
-          <img src={airQuality} alt="Air Quality" />
+          <img src={airQuality} alt="Air Quality" className="icon" />
           <span className="air-quality-title">Air quality</span>
         </div>
       </div>
