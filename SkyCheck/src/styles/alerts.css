@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
 
+/* ======== CARD BASE (tu diseño) ======== */
 .alerts-card {
   position: relative;
   width: 93%;
@@ -53,7 +54,84 @@
   font-size: 0.95rem;
   color: #2b2b2b;
   box-shadow:
-    0 6px 18px rgba(0,0,0,0.1),          /* caída más marcada */
-    0 0 0 1px rgba(0,0,0,0.04) inset,     /* borde interior muy sutil */
-    0 1px 0 rgba(255,191,166,0.35) inset; /* highlight cálido (no blanco) */
+    0 6px 18px rgba(0,0,0,0.1),          
+    0 0 0 1px rgba(0,0,0,0.04) inset,     
+    0 1px 0 rgba(255,191,166,0.35) inset; 
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  word-break: break-word;
+}
+
+/* ======== EXTRAS: Estado vacío ======== */
+.alerts-card__empty {
+  background: #fff7f3;
+  border: 1px dashed rgba(0,0,0,0.1);
+  border-radius: 14px;
+  padding: 12px 16px;
+  color: #6b7280;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* ======== EXTRAS: Íconos y adornos de cada item ======== */
+.alert-item__icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  vertical-align: -2px;
+  opacity: 0.95;
+}
+
+.alert-item__text { margin-right: 8px; }
+
+.alert-item__badge {
+  margin-left: auto;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #3730a3;
+}
+
+.alert-item__link {
+  margin-left: 8px;
+  font-size: 0.85rem;
+  text-decoration: underline;
+  color: #1f2937;
+}
+
+/* ======== EXTRAS: Severidades ======== */
+.alert-item.is-info {
+  background: #eef6ff;            
+  border-color: rgba(59,130,246,0.25);
+  box-shadow:
+    0 6px 18px rgba(59,130,246,0.08),
+    inset 4px 0 0 0 rgba(59,130,246,0.35),
+    0 1px 0 rgba(255,255,255,0.35) inset;
+}
+
+.alert-item.is-warning {
+  background: #fff7ed;            
+  border-color: rgba(245,158,11,0.25);
+  box-shadow:
+    0 6px 18px rgba(245,158,11,0.10),
+    inset 4px 0 0 0 rgba(245,158,11,0.45),
+    0 1px 0 rgba(255,255,255,0.35) inset;
+}
+
+.alert-item.is-danger {
+  background: #fef2f2;            
+  border-color: rgba(239,68,68,0.25);
+  box-shadow:
+    0 6px 18px rgba(239,68,68,0.10),
+    inset 4px 0 0 0 rgba(239,68,68,0.45),
+    0 1px 0 rgba(255,255,255,0.35) inset;
+}
+
+/* ======== Responsive ======== */
+.alerts-card__list { grid-template-columns: 1fr; }
+@media (min-width: 560px) {
+  .alerts-card__list { grid-template-columns: 1fr; }
 }

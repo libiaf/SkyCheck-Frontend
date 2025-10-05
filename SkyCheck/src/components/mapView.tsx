@@ -1,4 +1,4 @@
-import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, useMap, useMapEvents } from "react-leaflet";
 import { useEffect } from "react";
 
 type Props = {
@@ -6,8 +6,10 @@ type Props = {
   lon: number;
   zoom: number;
   label?: string;
-  overlayUrl?: string;    
-  overlayOpacity?: number; 
+  overlayUrl?: string;
+  overlayOpacity?: number;
+  /** Nuevo: callback cuando el usuario hace clic en el mapa */
+  onPick?: (lat: number, lon: number) => void;
 };
 
 function FlyTo({ lat, lon, zoom }: { lat:number; lon:number; zoom:number }) {
@@ -16,7 +18,25 @@ function FlyTo({ lat, lon, zoom }: { lat:number; lon:number; zoom:number }) {
   return null;
 }
 
-export default function MapView({ lat, lon, zoom, label, overlayUrl, overlayOpacity = 0.55 }: Props) {
+/** Nuevo: solo escucha clics y emite lat/lon */
+function ClickCapture({ onPick }: { onPick?: (lat:number, lon:number) => void }) {
+  useMapEvents({
+    click(e) {
+      onPick?.(e.latlng.lat, e.latlng.lng);
+    },
+  });
+  return null;
+}
+
+export default function MapView({
+  lat,
+  lon,
+  zoom,
+  label,
+  overlayUrl,
+  overlayOpacity = 0.55,
+  onPick,
+}: Props) {
   return (
     <MapContainer
       center={[lat, lon]}
@@ -42,10 +62,16 @@ export default function MapView({ lat, lon, zoom, label, overlayUrl, overlayOpac
         />
       )}
 
+      {/* Mantiene tu animación de vuelo */}
       <FlyTo lat={lat} lon={lon} zoom={zoom} />
+
+      {/* Captura el clic y le avisa al padre */}
+      <ClickCapture onPick={onPick} />
+
+      {/* Marker controlado por props (lo mueve el padre) */}
       <Marker position={[lat, lon]}>
         <Popup>{label ?? `${lat.toFixed(4)}, ${lon.toFixed(4)}`}</Popup>
       </Marker>
     </MapContainer>
-  );
+  );
 }
