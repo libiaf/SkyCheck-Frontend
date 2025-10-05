@@ -38,7 +38,6 @@ const Principal = () => {
                 <div> {/* left content, wet+date+hours */}
                     {/*<ReactDatePicker></ReactDatePicker>*/}
                     <div> {/* wet */}
-                    
                     </div>
                     <div> {/* date + hours */}
                         <div> {/* date */}
