@@ -4,6 +4,7 @@ import WindOverview from '../components/WindOverview.tsx';
 import UVindice from '../components/UVindex.tsx';
 import ReactDatePicker from '../components/datepicker';
 import Alerts from '../components/Alerts';
+import AirQuality from '../components/airQuality.tsx';
 import '../styles/principal.css';
 
 const Principal = () => {
@@ -39,6 +40,7 @@ const Principal = () => {
                     <WeatherWidgets />
                     <WindOverview velocity={15} direction={0} gusts={25} />
                     <UVindice uvIndex={8} level="High" />
+                    <AirQuality aqi={120} level="Moderate" />
                     <div className= "espacio"></div>
                 </Dashboard>
                 </div>
