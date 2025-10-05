@@ -1,15 +1,104 @@
 @import url('https://fonts.googleapis.com/css2?family=Alice&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
 
 .principal-container {
-  display: flex;  
-  justify-items: flex-end;
-  align-items: right;        /* centra verticalmente */
-  height: 100vh;              /* ocupa toda la altura */
-  padding: 2rem;
-  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
   font-family: "Source Serif 4", serif;
 }
 
 .espacio {
-  padding: 0.5rem;                    /* ocupa el espacio restante */
+  padding: 0.5rem;
+}
+
+body{
+  overflow-y: hidden;
+  height: 100vh;
+}
+
+.time-overlay {
+  position: absolute;
+  left: 2%;
+  bottom: 6%;
+  z-index: 9999;
+   /* Reducido de 28rem a 26rem */
+  /* background: rgba(255, 255, 255, 0.95); */
+  border-radius: 30px;
+  /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); */
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.date-overlay{
+  position: absolute;
+  left: 6%;
+  bottom: 55%;
+  z-index: 9999;
+  width:37rem; /* Reducido de 28rem a 26rem */
+  height: 20rem;
+  /* background: rgba(255, 255, 255, 0.95); */
+  border-radius: 30px;
+  /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); */
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-overlay {
+  position: absolute;
+  top: 1%;
+  right: 0%;
+  bottom: 6%;
+  z-index: 9999;
+  width:34rem; /* Reducido de 28rem a 26rem */
+  /* background: rgba(255, 255, 255, 0.95); */
+  border-radius: 16px;
+  /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); */
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Contenedor interno con scroll suave */
+.dashboard-overlay > * {
+  overflow-y: auto;
+  overflow-x: hidden; /* Esta línea previene el scroll horizontal */
+  padding: 1.25rem;
+  height: 100%;
+  box-sizing: border-box; /* IMPORTANTE: incluye el padding en el ancho */
+}
+
+.dashboard-overlay * {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.dashboard-overlay img,
+.dashboard-overlay svg,
+.dashboard-overlay canvas {
+  max-width: 100% !important;
+  height: auto;
+}
+/* Estilo del scrollbar para que se vea bonito */
+.dashboard-overlay *::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dashboard-overlay *::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.dashboard-overlay *::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.dashboard-overlay *::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
 }

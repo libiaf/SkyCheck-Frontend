@@ -59,6 +59,8 @@ const ReactDatePicker: React.FC = () => {
         className="date-input"
         calendarClassName="dp-calendar"
         popperClassName="dp-popper"
+          
+
         selected={date}
         onChange={(d: Date | null) => setDate(d)}
         dateFormat="MMM d, yyyy"

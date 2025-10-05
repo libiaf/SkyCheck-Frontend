@@ -10,7 +10,7 @@
 }
 
 .widget-card {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(10px);
     border-radius: 1.3125rem;
     padding: 0.9375rem;
@@ -19,11 +19,6 @@
     min-width: 10%;
     text-align: center;
     /* transition: transform 0.2s ease, box-shadow 0.2s ease; */
-}
-
-.widget-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
 .humidity-widget {
@@ -40,12 +35,6 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
     min-width: 10%;
     text-align: center;
-    
-}
-
-.humidity-widget:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
     
 }
 
@@ -148,7 +137,7 @@
     background: #DFEAFA;
     color: #000000;
     font-family: 'Source Serif 4', serif;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     
 }
 
@@ -156,13 +145,13 @@
     background: #DFEAFA;
     color: #000000;
     font-family: 'Source Serif 4', serif;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 
 .badge-low {
     background: #DFEAFA;
     color: #000000;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-family: 'Source Serif 4', serif;
 }
 

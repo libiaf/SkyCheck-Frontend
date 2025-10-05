@@ -1,0 +1,14 @@
+.leaflet-tile-pane img { mix-blend-mode: normal; }
+
+/* Nubes negras “sombras” sin tapar el mapa */
+.clouds-dark img {
+  /* Paso 1: convertir la capa a “tinta” negra */
+  filter: grayscale(100%) brightness(0) contrast(1.2);
+  /* Paso 2: mezclar como sombra sobre base CLARO */
+  mix-blend-mode: multiply;
+  /* Paso 3: controla lo fuerte que se ven */
+  opacity: 0.65;
+}
+
+/* Si las quieres MÁS negras, baja un poco la opacidad del filtro (no la subas >0.75): */
+/* .clouds-dark img { opacity: 0.7; } */

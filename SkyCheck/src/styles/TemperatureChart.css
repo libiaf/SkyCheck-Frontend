@@ -2,7 +2,7 @@
   display: block;
   inline-size: 100%;              
   max-inline-size: none;          
-  background: #fff;
+  background: rgba(255, 255, 255, 0.4);
   border-radius: 16px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
   padding: 12px 12px 14px;
@@ -10,11 +10,6 @@
   color: #222;
   margin: 1.5rem auto 0;   
   width: 93%;         
-}
-
-.tempCard:hover {
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-    transform: translateY(-2px);
 }
 
 .tempHeader {
@@ -52,7 +47,7 @@
 }
 
 .tt {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.4);
   border: 1px solid #e5e7eb;
   border-radius: 10px;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
