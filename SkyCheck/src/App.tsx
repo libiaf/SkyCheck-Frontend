@@ -1,11 +1,10 @@
-import { Outlet } from 'react-router-dom';
-
+import { Routes, Route } from "react-router-dom";
+import Principal from "./pages/principal";
 
 export default function App() {
-
   return (
-    <>
-      <Outlet />
-    </>
+    <Routes>
+      <Route path="/" element={<Principal />} />
+    </Routes>
   );
-};
+}
