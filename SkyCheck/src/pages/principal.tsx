@@ -5,7 +5,28 @@ import UVindice from '../components/UVindex.tsx';
 import ReactDatePicker from '../components/datepicker';
 import Alerts from '../components/Alerts';
 import AirQuality from '../components/airQuality.tsx';
+import TemperatureChartCJ, { type TempPoint } from "../components/TemperatureChart";
+
 import '../styles/principal.css';
+
+const mockTemps: TempPoint[] = [
+  { dateISO: "2025-09-04", highC: 35, lowC: 24 },
+  { dateISO: "2025-09-05", highC: 34, lowC: 21 },
+  { dateISO: "2025-09-06", highC: 35, lowC: 21 },
+  { dateISO: "2025-09-07", highC: 38, lowC: 24 },
+  { dateISO: "2025-09-08", highC: 39, lowC: 25 },
+  { dateISO: "2025-09-09", highC: 40, lowC: 26 },
+  { dateISO: "2025-09-10", highC: 41, lowC: 26 },
+  { dateISO: "2025-09-11", highC: 38, lowC: 28 },
+  { dateISO: "2025-09-12", highC: 37, lowC: 28 },
+  { dateISO: "2025-09-13", highC: 35, lowC: 27 },
+  { dateISO: "2025-09-14", highC: 33, lowC: 27 },
+  { dateISO: "2025-09-15", highC: 30, lowC: 24 },
+  { dateISO: "2025-09-16", highC: 32, lowC: 24 },
+  { dateISO: "2025-09-17", highC: 30, lowC: 22 },
+];
+
+
 
 const Principal = () => {
     return (
@@ -41,6 +62,7 @@ const Principal = () => {
                     <WindOverview velocity={15} direction={0} gusts={25} />
                     <UVindice uvIndex={8} level="High" />
                     <AirQuality aqi={120} level="Moderate" />
+                    <TemperatureChartCJ data={mockTemps} />
                     <div className= "espacio"></div>
                 </Dashboard>
                 </div>
