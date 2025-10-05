@@ -1,7 +1,5 @@
 # SkyCheck-Frontend
 
-# SkyCheck Frontend
-
 Interfaz de usuario del proyecto SkyCheck, una aplicación web enfocada en mostrar condiciones del clima y del cielo mediante componentes visuales interactivos.
 
 ## Descripción
