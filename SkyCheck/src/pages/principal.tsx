@@ -29,6 +29,7 @@ const Principal = () => {
                 </div>
                 <div className="principal-container d-flex justify-content-end align-items-end">
                 <Dashboard ciudad="Hermosillo" >
+                    <div className= "espacio"></div>
                     <Alerts
                     items={[
                         "Warning: High UV index expected.",
@@ -38,6 +39,7 @@ const Principal = () => {
                     <WeatherWidgets />
                     <WindOverview velocity={15} direction={0} gusts={25} />
                     <UVindice uvIndex={8} level="High" />
+                    <div className= "espacio"></div>
                 </Dashboard>
                 </div>
             </div>

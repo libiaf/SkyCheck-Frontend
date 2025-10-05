@@ -9,3 +9,7 @@
   width: 100vw;
   font-family: "Source Serif 4", serif;
 }
+
+.espacio {
+  padding: 0.5rem;                    /* ocupa el espacio restante */
+}
