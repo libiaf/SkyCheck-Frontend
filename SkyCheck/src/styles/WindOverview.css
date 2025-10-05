@@ -22,7 +22,7 @@
 .wind-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 2rem;
 }
 
 
@@ -57,7 +57,7 @@
   color: #000000;
   background-color: #DFEAFA;
   padding: 0.2rem 0.5rem;
-  border-radius: 30px;
+  border-radius: 21px;
   font-family: "Source Serif 4", serif;
 }
 
