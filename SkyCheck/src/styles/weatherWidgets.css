@@ -2,49 +2,48 @@
 
 .widgets-container {
     display: flex;
-    gap: 20px;
+    gap: 0.8rem;
     width: 100%;
-    padding: 10px;
+    max-width: 100%;
+    padding: 0.625rem;
+    box-sizing: border-box;
+    width: 98%;
 }
 
 .widget-card {
     background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
-    border-radius: 30px;
-    padding: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    min-width: 320px;
+    backdrop-filter: blur(0.625rem);
+    border-radius: 1.3125rem;
+    padding: 0.9375rem;
+    border: 0.0625rem solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.25);
+    flex: 1;
+    min-width: 0;
     text-align: center;
-    /* transition: transform 0.2s ease, box-shadow 0.2s ease; */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .widget-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    transform: translateY(-0.125rem);
+    box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.25);
 }
 
 .humidity-widget {
-    /* min-width: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px; */
     background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
-    border-radius: 30px;
-    padding: 21px 17px 17px 17px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    min-width: 173px;
+    backdrop-filter: blur(0.625rem);
+    border-radius: 1.3125rem;
+    padding: 1.3125rem 1.0625rem 1.0625rem 1.0625rem;
+    border: 0.0625rem solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.25);
+    flex: 1;
+    min-width: 0;
     text-align: center;
-    
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .humidity-widget:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-    
+    transform: translateY(-0.125rem);
+    box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.25);
 }
 
 .widget-header {
@@ -52,17 +51,20 @@
     justify-content: center;
     align-content: center;
     align-items: center;
-    gap: 8px;
-    margin-bottom: 20px;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
 }
 
 .widget-header svg {
     color: #555;
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
 }
 
 .widget-header h3 {
     margin: 0;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 600;
     font-family: 'Source Serif 4', serif;
     color: #333;
@@ -70,50 +72,43 @@
 
 .precipitation-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    width: 100%;
 }
-/* 
-.precipitation-square {
-    border-radius: 21px;
-    margin-bottom: 8px;
-
-} */
 
 .data-card {
     background: rgba(255, 255, 255, 0.8);
-    border-radius: 30px;
+    border-radius: 1.3125rem;
     text-align: center;
-    border-radius: 21px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-    padding: 12px 12px 0px 12px;
-
+    box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.25);
+    padding: 0.75rem 0.75rem 0 0.75rem;
+    box-sizing: border-box;
 }
 
 .data-card.large {
-    padding: 25px 33px 25px;
-    margin-bottom: 10px;
+    padding: 1.5625rem 2.0625rem;
+    margin-bottom: 0.625rem;
     background: rgba(255, 255, 255, 0.8);
-    border-radius: 30px;
+    border-radius: 1.3125rem;
     text-align: center;
-    border-radius: 21px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.25);
 }
 
 .extra-margin {
-    margin-top: 4px;
+    margin-top: 0.25rem;
 }
 
-.extra-margin2{
-    padding-top: 10px;
+.extra-margin2 {
+    padding-top: 0.625rem;
 }
+
 .value {
     font-size: 2.5rem;
     font-weight: 500;
     font-family: 'Source Serif 4', serif;
     color: #222;
-    margin-bottom: 0; 
+    margin-bottom: 0;
     line-height: 1;
 }
 
@@ -122,45 +117,46 @@
     font-weight: 500;
     font-family: 'Source Serif 4', serif;
     color: #222;
-    margin-bottom: 0; 
+    margin-bottom: 0;
     line-height: 1;
 }
 
 .unit {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #000000;
-    margin-bottom: 12px;
+    margin-bottom: 0.75rem;
     font-family: 'Source Serif 4', serif;
+    padding-bottom: 8%;
 }
 
 .badge {
     display: inline-block;
-    border-radius: 30px;
+    border-radius: 1.3125rem;
     font-weight: 500;
     font-family: 'Source Serif 4', serif;
     font-size: 1rem;
-    padding: 6px 24px !important; 
+    padding: 0.375rem 0.9375rem !important;
+    box-sizing: border-box;
 }
 
 .badge-purple {
     background: #DFEAFA;
     color: #000000;
     font-family: 'Source Serif 4', serif;
-    font-size: 1rem;
-    
+    font-size: 0.8rem;
 }
 
 .badge-blue {
     background: #DFEAFA;
     color: #000000;
     font-family: 'Source Serif 4', serif;
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 .badge-low {
     background: #DFEAFA;
     color: #000000;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-family: 'Source Serif 4', serif;
 }
 
@@ -175,17 +171,20 @@
     color: #000000;
     font-size: 1rem;
 }
+
 .badge.badge-low {
-    padding: 6px 54px !important;
+    padding: 0.375rem 5.700rem !important;
 }
 
 .badge.badge-medium {
-    padding: 6px 54px !important;
+    padding: 0.375rem 5.700rem !important;
 }
 
 .badge.badge-high {
-    padding: 6px 54px !important;
+    padding: 0.375rem 5.700rem !important;
 }
+
+/* Responsive breakpoints */
 @media (max-width: 768px) {
     .widgets-container {
         flex-direction: column;
@@ -194,4 +193,61 @@
     .precipitation-grid {
         grid-template-columns: 1fr;
     }
+
+    .widget-header h3 {
+        font-size: 1rem;
+    }
+
+    .value,
+    .value.large {
+        font-size: 2rem;
+    }
+
+    .badge.badge-low,
+    .badge.badge-medium,
+    .badge.badge-high {
+        padding: 0.375rem 2rem !important;
+    }
 }
+
+@media (max-width: 480px) {
+    .widgets-container {
+        padding: 0.5rem;
+        gap: 0.75rem;
+    }
+
+    .widget-card,
+    .humidity-widget {
+        padding: 0.75rem;
+    }
+
+    .widget-header {
+        gap: 0.375rem;
+        margin-bottom: 0.875rem;
+    }
+
+    .widget-header svg {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+
+    .value,
+    .value.large {
+        font-size: 1.75rem;
+    }
+
+    .unit {
+        font-size: 1rem;
+    }
+
+    .badge {
+        font-size: 0.875rem;
+    }
+
+    .badge.badge-low,
+    .badge.badge-medium,
+    .badge.badge-high {
+        padding: 0.375rem 1.5rem !important;
+    }
+}
+
